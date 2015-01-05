@@ -81,4 +81,9 @@ rvm_gem {
     ruby_version => 'ruby-2.2.0',
     ensure       => latest,
     require      => Rvm_system_ruby['ruby-2.2.0'];
+  'pgsql':
+    name         => 'pgsql',
+    ruby_version => 'ruby-2.2.0',
+    ensure       => latest,
+    require      => Rvm_system_ruby['ruby-2.2.0'];
 }
