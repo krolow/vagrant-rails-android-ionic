@@ -16,7 +16,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.provision :shell do |shell|
     commands = []
-    commands << "if [[ ! -f /apt-get-run ]]; then sudo apt-get update && sudo apt-get upgrade && sudo touch /apt-get-run; fi"    
+    commands << "if [[ ! -f /apt-get-run ]]; then sudo apt-get update && sudo apt-get --yes --force-yes upgrade && sudo touch /apt-get-run; fi"    
     commands << install_dep("maestrodev-rvm", "-v 1.8.1")
     commands << install_dep("puppetlabs-postgresql", "-v 4.1.0")
     commands << install_dep("willdurand-nodejs", "-v 1.8.4")

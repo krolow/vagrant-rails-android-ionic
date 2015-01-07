@@ -1,4 +1,4 @@
-package { ['usbutils', 'git', 'vim-nox']:
+package { ['usbutils', 'git', 'vim-nox', 'libpq-dev']:
   ensure => 'installed'
 }
 
@@ -57,10 +57,10 @@ postgresql::server::db { 'project':
   password => postgresql_password('project', 'project'),
 }
 
-include rvm
+class { 'rvm': version => '1.26.6' }
 
 rvm_system_ruby {
-  'ruby-2.2.0':
+  'ruby-2.1':
     ensure      => 'present',
     default_use => true
 }
@@ -68,22 +68,22 @@ rvm_system_ruby {
 rvm_gem {
   'rails-api':
     name         => 'rails-api',
-    ruby_version => 'ruby-2.2.0',
+    ruby_version => 'ruby-2.1',
     ensure       => latest,
-    require      => Rvm_system_ruby['ruby-2.2.0'];
+    require      => Rvm_system_ruby['ruby-2.1'];
   'rails':
     name         => 'rails',
-    ruby_version => 'ruby-2.2.0',
+    ruby_version => 'ruby-2.1',
     ensure       => "4.2.0",
-    require      => Rvm_system_ruby['ruby-2.2.0'];
+    require      => Rvm_system_ruby['ruby-2.1'];
   'puppet':
     name         => 'puppet',
-    ruby_version => 'ruby-2.2.0',
+    ruby_version => 'ruby-2.1',
     ensure       => latest,
-    require      => Rvm_system_ruby['ruby-2.2.0'];
+    require      => Rvm_system_ruby['ruby-2.1'];
   'pgsql':
     name         => 'pgsql',
-    ruby_version => 'ruby-2.2.0',
+    ruby_version => 'ruby-2.1',
     ensure       => latest,
-    require      => Rvm_system_ruby['ruby-2.2.0'];
+    require      => Rvm_system_ruby['ruby-2.1'];
 }
