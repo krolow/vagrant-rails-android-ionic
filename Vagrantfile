@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant virtual environment requires a box to build off of.
   config.vm.box = "puphpet/debian75-x32"
-
+  config.vm.network "forwarded_port", guest: 3000, host: 3000
 
   config.vm.provision :shell do |shell|
     commands = []
