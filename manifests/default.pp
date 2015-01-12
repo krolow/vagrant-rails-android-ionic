@@ -1,4 +1,4 @@
-package { ['usbutils', 'git', 'vim-nox', 'libpq-dev']:
+package { ['usbutils', 'git', 'vim-nox', 'libpq-dev', 'imagemagick']:
   ensure => 'installed'
 }
 
