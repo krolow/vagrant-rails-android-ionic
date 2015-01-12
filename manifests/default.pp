@@ -57,6 +57,11 @@ postgresql::server::db { 'project':
   password => postgresql_password('project', 'project'),
 }
 
+postgresql::server::db { 'project_test':
+  user     => 'project',
+  password => postgresql_password('project', 'project'),
+}
+
 class { 'rvm': version => '1.26.6' }
 
 rvm_system_ruby {
