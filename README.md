@@ -1,4 +1,4 @@
-stalker-vm
+Vagrant for rails + android + phonegap
 ==========
 
 ## Install
