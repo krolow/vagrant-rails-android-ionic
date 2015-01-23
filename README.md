@@ -1,4 +1,4 @@
-Vagrant for rails + android + phonegap
+Vagrant for rails + android + ionic
 ==========
 
 ## Install
