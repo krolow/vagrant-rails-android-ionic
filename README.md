@@ -7,6 +7,9 @@ Vagrant for rails + android + ionic
   * bower
   * cordova
   * ionic
+  * gulp
+  * yeoman
+  * generator-gulp-angular
 * java
   * android sdk
   * android 10
