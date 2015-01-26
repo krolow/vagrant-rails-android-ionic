@@ -21,6 +21,11 @@ package { 'bower':
   require  => Class['nodejs']
 }
 
+package { 'gulp':
+  provider => 'npm',
+  require  => Class['nodejs']
+}
+
 class { 'java':
   distribution => 'jdk',
   version      => 'latest',
