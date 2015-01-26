@@ -26,6 +26,16 @@ package { 'gulp':
   require  => Class['nodejs']
 }
 
+package { 'yo':
+  provider => 'npm',
+  require  => Class['nodejs']
+}
+
+package { 'generator-gulp-angular':
+  provider => 'npm',
+  require  => Class['nodejs']
+}
+
 class { 'java':
   distribution => 'jdk',
   version      => 'latest',
