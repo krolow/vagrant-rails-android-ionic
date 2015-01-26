@@ -31,6 +31,6 @@ Vagrant.configure("2") do |config|
     puppet.options = ['--verbose']
   end
 
-  config.vm.synced_folder "../", "/srv/stalker/"
+  config.vm.synced_folder "../", "/home/vagrant/public_html/"
 
 end

@@ -23,4 +23,7 @@ Vagrant for rails + android + ionic
   * database: project
   * user: project
   * password: project
-  
+
+## Synced Folder
+
+"../" to "/home/vagrant/public_html/"
